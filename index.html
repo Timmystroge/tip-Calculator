@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tip calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form action="" class="tip">
+        <div class="form-group mt">
+          <label for="">Bill total</label>
+
+          <div>
+            <span class="usd">$</span>
+            <input onkeyup="calculateBill()" type="text" name="" id="billTotalInput" />
+          </div>
+        </div>
+        <div class="form-group mt">
+          <label for="">Tip</label>
+
+          <div>
+            <span class="usd">%</span>
+            <input onkeyup="calculateBill()" type="text" name="" id="tipInput" />
+          </div>
+        </div>
+      </form>
+
+      <div class="flex">
+        <div>
+          <h3>People</h3>
+          <div class="increment">
+            <button onclick="increasePeople()">+</button>
+            <p class="people" id="numberOfPeople">1</p>
+            <button onclick="decreasePeople()">-</button>
+          </div>
+        </div>
+
+        <div>
+          <h3>Total per Person</h3>
+          <h2 class="totalPrice">$ <span id="perPersonTotal">0.00</span></h2>
+        </div>
+      </div>
+    </div>
+
+    <script src="/tipCalculator/main.js"></script>
+  </body>
+</html>
